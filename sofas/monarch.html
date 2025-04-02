@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CozyHome - Monarch 3 Seater Sofa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .top-banner {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            position: relative;
+        }
+        .top-banner .close {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            padding: 10px 0;
+            background-color: #f5f5f5;
+            justify-content: space-between;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        .nav-left > * {
+            margin-right: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input {
+            padding: 8px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        .icon-group {
+            display: flex;
+            align-items: center;
+        }
+        .icon-group > * {
+            margin-left: 15px;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 14px;
+        }
+        .product-container {
+            display: flex;
+        }
+        .product-images {
+            width: 50%;
+            position: relative;
+            display: flex;
+        }
+        .product-thumbnails {
+            width: 80px;
+        }
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .main-image {
+            width: calc(100% - 80px);
+            margin-left: 10px;
+        }
+        .product-details {
+            width: 50%;
+            padding: 0 20px;
+        }
+        .product-id {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .product-title {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .product-subtitle {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .ordered-by {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .color-section {
+            margin-bottom: 20px;
+        }
+        .color-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #6d2e2e;
+            border: 1px solid #333;
+            display: inline-block;
+        }
+        .seating-section {
+            margin-bottom: 20px;
+        }
+        .size-options {
+            display: flex;
+            margin-top: 10px;
+        }
+        .size-option {
+            border: 1px solid #ccc;
+            padding: 15px 20px;
+            text-align: center;
+            margin-right: 10px;
+            min-width: 120px;
+        }
+        .size-option.active {
+            border: 2px solid #000;
+        }
+        .offer-price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .discount {
+            color: green;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .mrp {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .tax-note {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        .available-offers {
+            margin-bottom: 20px;
+        }
+        .offer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .offer-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e57373;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 10px;
+        }
+        .offer-details {
+            font-size: 14px;
+        }
+        .view-offer {
+            color: blue;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .learn-more {
+            color: blue;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .benefits {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .benefit {
+            text-align: center;
+            flex: 1;
+        }
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+        .location {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .edit-button {
+            color: blue;
+            margin-left: auto;
+            cursor: pointer;
+        }
+        .delivery-date {
+            font-size: 14px;
+            color: #555;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        10% Instant discount on Federal Bank Credit Card EMI Transaction, up to ₹1,500 on order of ₹10,000 and above
+        <span class="close">×</span>
+    </div>
+    
+    <nav>
+        <div class="nav-left">
+            <a href="#" class="logo">CozyHome</a>
+            <div class="nav-links">
+                <a href="#">HOME FURNITURE</a>
+                <a href="#">BUSINESS FURNITURE & PROJECTS</a>
+                <a href="#">SERVICES</a>
+                <a href="#">BLOGS</a>
+                <a href="#">BECOME OUR DEALER</a>
+                <a href="#">STORE LOCATOR</a>
+                <a href="#">TRACK ORDER</a>
+                <a href="#">CONTACT US</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="nav-links" style="background-color: white; padding: 10px 0;">
+        <a href="#">PRODUCTS</a>
+        <a href="#">FURNITURE SETS</a>
+        <a href="#">ROOMS</a>
+        <a href="#">HOME INTERIORS</a>
+        <a href="#">KITCHENS</a>
+        <a href="#">NEW ARRIVALS</a>
+        <a href="#">OFFERS</a>
+        
+        <div class="search-container" style="margin-left: auto;">
+            <input type="text" placeholder="What are you looking for ?">
+            <div class="icon-group">
+                <span>🔍</span>
+                <span>📷</span>
+                <span>❤️</span>
+                <span>🛒</span>
+                <span>👤</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="breadcrumb">
+        <span>Home > Seating > Sofas & Loungers > Sofa Design</span>
+    </div>
+    
+    <div class="product-container">
+        <div class="product-images">
+            <div class="main-image">
+                <img src="../images/Monrach.png" alt="Monarch 3 Seater Sofa" style="max-width: 100%;">
+            </div>
+        </div>
+        
+        <div class="product-details">
+            <div class="product-id">Product ID: 56101XXXXX00698</div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1 class="product-title">Monarch 3 Seater Sofa</h1>
+                <div>
+                    <span>WISHLIST ❤️</span>
+                    <span>SHARE 🔗</span>
+                </div>
+            </div>
+            <p class="product-subtitle">Leatherette, Burgundy</p>
+            
+            <div class="ordered-by">📈 Ordered by 87 Customers</div>
+            
+            <div class="color-section">
+                <div>COLOR : Burgundy</div>
+                <div class="color-circle"></div>
+            </div>
+            
+            <div class="seating-section">
+                <div>SEATING CAPACITY : 3 Seater</div>
+                
+                <div class="size-options">
+                    <div class="size-option">
+                        <div>1 Seater</div>
+                        <div>₹13,390</div>
+                    </div>
+                    <div class="size-option active">
+                        <div>3 Seater</div>
+                        <div>₹22,990</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="price-section">
+                <div class="offer-price">Offer Price: ₹22,990 <span class="discount">22% OFF</span></div>
+                <div class="mrp">MRP: ₹29,548</div>
+                <div class="tax-note">Inclusive of all taxes</div>
+            </div>
+            
+            <div class="available-offers">
+                <h3>Available Offers</h3>
+                
+                <div class="offer">
+                    <div class="offer-icon">%</div>
+                    <div class="offer-details">
+                        <div><strong>Bank offer:</strong> 10% Instant discount on Federal Bank Credit Card EMI Transaction, up to ₹1,500 on purchase value of ₹10,000 and above.</div>
+                        <div class="view-offer">VIEW OFFER</div>
+                    </div>
+                </div>
+                
+                <div class="offer">
+                    <div class="offer-icon">📅</div>
+                    <div class="offer-details">
+                        <div><strong>No Cost EMI:</strong> Starting from ₹3832/month. Standard EMI also available.</div>
+                        <div class="learn-more">LEARN MORE</div>
+                    </div>
+                </div>
+                
+                <div class="offer">
+                    <div class="offer-icon">🛡️</div>
+                    <div class="offer-details">
+                        <div><strong>Warranty:</strong> Free Standard 1 Year Warranty. Get extended warranty starting at ₹999</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">🚚</div>
+                    <div>Free Delivery<br>& Installation</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">⏰</div>
+                    <div>7 days<br>Replacement</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">✓</div>
+                    <div>Assured<br>Quality</div>
+                </div>
+            </div>
+            
+            <div class="location">
+                <div>📍 400001</div>
+                <div class="edit-button">EDIT</div>
+            </div>
+            
+            <div class="delivery-date">
+                Delivery by Saturday, 5 April 2025
+            </div>
+        </div>
+    </div>
+</body>
+</html>

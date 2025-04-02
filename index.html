@@ -434,7 +434,6 @@
       </div>
       
       <div style="margin-top: 20px; background-color: #fff; display: inline-block; padding: 5px 10px; border-radius: 5px;">
-        <img src="/api/placeholder/150/40" alt="Premier Bank" style="height: 30px;">
         <span style="font-size: 12px; color: #555; vertical-align: middle; margin-left: 10px;">
           10% Instant Discount* on Premier Bank Credit Card EMI Transactions
         </span>
@@ -442,47 +441,49 @@
     </div>
     
     <div class="hero-image">
-      <img src="/static/" alt="Luxury Bed" style="max-width: 100%;">
+      <img src="images/Home_Img.png" alt="Luxury Bed" style="max-width: 100%;">
+    </div>
+  </div>
+  <!-- Offers Section -->
+ <!-- Offers Section -->
+<div class="offers" style="background-color: #fff; padding: 20px; display: flex; gap: 15px; justify-content: space-between; align-items: stretch; flex-wrap: wrap;">
+
+  <!-- Offer 1 (Icon + Bank Logos) -->
+  <div class="offer-box" style="display: flex; flex: 1; min-width: 280px; background-color: #fff; border: 1px solid #eee; border-radius: 5px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); align-items: center;">
+    <div class="offer-content" style="flex: 1;">
+      <div class="offer-description" style="font-size: 12px; color: #555;">
+        <img src="images/Bank_Dis_Img.png" alt="Bank Logos" style="max-width: 100%; height: auto; object-fit: contain;">
+      </div>
     </div>
   </div>
 
-  <!-- Offers Section -->
-  <div class="offers">
-    <div class="offer-box">
-      <div class="offer-icon">
-                  <img src="/api/placeholder/40/40" alt="Calendar Icon">
+  <!-- Offer 2 (Icon only) -->
+  <div class="offer-box" style="display: flex; flex: 1; min-width: 280px; background-color: #fff; border: 1px solid #eee; border-radius: 5px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); align-items: center;">
+    <div class="offer-content" style="flex: 1;">
+      <div class="offer-description" style="font-size: 12px; color: #555;">
+        <img src="images/Add_Dis_Img.png" alt="Bank Logos" style="max-width: 100%; height: auto; object-fit: contain;">
       </div>
-      <div class="offer-content">
-        <div class="offer-title">Get No-Cost-EMI options from most leading banks</div>
-        <div class="offer-description">
-          <img src="/api/placeholder/200/30" alt="Bank Logos">
-        </div>
-      </div>
-    </div>
-    
-    <div class="offer-box">
-      <div class="offer-icon">
-                  <img src="/api/placeholder/40/40" alt="Exchange Icon">
-      </div>
-      <div class="offer-content">
-        <div class="offer-title">Save additional ₹5,000*</div>
-        <div class="offer-description">on exchange of your old furniture with the new furniture</div>
-      </div>
-    </div>
-    
-    <div class="clearance-banner">
-      <div class="sale-tag">70% OFF</div>
-      <div class="clearance-title">CLEARANCE SALE</div>
-      <img src="/api/placeholder/100/60" alt="Sale Sofa" style="margin-left: auto;">
     </div>
   </div>
+
+  <!-- Clearance Banner (Image only) -->
+  <div class="clearance-banner" style="flex: 1; min-width: 280px; background-color: #fff; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 0;">
+    <img src="images/HPClearanceCornerTab_D_280325.PNG" alt="Sale Sofa" style="width: 100%; object-fit: cover;">
+  </div>
+
+  
+
+</div>
+
+
+
 
   <!-- Product Deals -->
   <div class="deals-section">
     <div class="deal-card">
       <div class="deal-tag">DEAL OF THE WEEK</div>
       <div class="deal-image">
-        <img src="/api/placeholder/250/200" alt="King Bed Mattress">
+        <img src="images/deal_1.png" alt="King Bed Mattress" style="max-width: 100%; height: auto; object-fit: contain;">
       </div>
       <div class="deal-info">
         <div class="deal-title">Yury King Bed Foam Mattress (78×72×5)</div>
@@ -493,7 +494,7 @@
     <div class="deal-card">
       <div class="deal-tag">DEAL OF THE MONTH</div>
       <div class="deal-image">
-        <img src="/api/placeholder/250/200" alt="Sliding Steel Wardrobe">
+        <img src="images/deal_2.png" alt="Sliding Steel Wardrobe">
       </div>
       <div class="deal-info">
         <div class="deal-title">Slide N Store 2-Door Sliding Steel Wardrobe</div>
@@ -504,7 +505,7 @@
     <div class="deal-card">
       <div class="deal-tag">AVAILABLE ONLINE ONLY</div>
       <div class="deal-image">
-        <img src="/api/placeholder/250/200" alt="Study Table with Chair">
+        <img src="images/deal_3.png" alt="Study Table with Chair">
       </div>
       <div class="deal-info">
         <div class="deal-title">Yury-Ewa Study Table with Chair</div>
@@ -512,24 +513,9 @@
       </div>
     </div>
   </div>
-  <script type='text/javascript'>
-    function initEmbeddedMessaging() {
-      try {
-        embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-  
-        embeddedservice_bootstrap.init(
-          '00D7x00000EuqtW',
-          'Product_Recommendation_Agent_ESD',
-          'https://realfast-ai--sandboxjtb.sandbox.my.site.com/ESWProductRecommendation1743574996532',
-          {
-            scrt2URL: 'https://realfast-ai--sandboxjtb.sandbox.my.salesforce-scrt.com'
-          }
-        );
-      } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-      }
-    };
-  </script>
+
+  <script src="realfast.js"></script>
+
   <script type='text/javascript' src='https://realfast-ai--sandboxjtb.sandbox.my.site.com/ESWProductRecommendation1743574996532/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
   
 

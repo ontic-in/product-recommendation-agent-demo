@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Houzi AI Real Estate Assistant
+ * Retail Agent Assistant
  * Embeds a chat widget with floating message prompts
  */
 

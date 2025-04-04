@@ -16,13 +16,13 @@ var MESSAGES = [
     id: "intro-msg",
   },
   {
-    text: "I need a comfy sofa—any recommendations?",
+    text: "Do you offer sofa-cum-beds?",
     position: "right",
     delay: 1000,
     id: "rec-sofa-sets-question",
   },
   {
-    text: "Do you have any deals or discounts on sofas?",
+    text: "Do you sell recliner chairs?",
     position: "right",
     delay: 2000,
     id: "rec-sofa-sets-with-storage-question",

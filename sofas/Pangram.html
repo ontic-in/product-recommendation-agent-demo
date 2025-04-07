@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CozyCouch - Pangram 3 Seater Fabric Sofa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header styles */
+        .top-navigation {
+            display: flex;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo-container {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            border-right: 1px solid #eee;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .main-nav-items {
+            display: flex;
+            padding: 0 20px;
+        }
+
+        .main-nav-items a {
+            padding: 15px 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+            display: block;
+        }
+
+        .active-nav {
+            border-bottom: 2px solid #000;
+        }
+
+        /* Secondary navigation */
+        .secondary-nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .secondary-nav-items {
+            display: flex;
+        }
+
+        .secondary-nav-items a {
+            padding: 8px 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .secondary-nav-items a span {
+            font-size: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        .icon-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-group a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Product section */
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-info {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .product-id {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product-subtitle {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-actions {
+            display: flex;
+        }
+
+        .social-actions a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+        }
+
+        /* Product display */
+        .product-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .product-gallery {
+            width: 60%;
+            display: flex;
+        }
+
+        .thumbnails {
+            width: 80px;
+        }
+
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-thumbnail {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-play-btn {
+            width: 40px;
+            height: 40px;
+            background-color: #ff9800;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .main-product-image {
+            width: calc(100% - 80px);
+            padding-left: 15px;
+        }
+
+        .main-product-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Product details */
+        .product-details {
+            width: 40%;
+            padding-left: 30px;
+        }
+
+        .rating {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .stars {
+            color: #ff5252;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        .review-count {
+            margin-left: 10px;
+            color: #555;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .review-count:hover {
+            text-decoration: underline;
+        }
+
+        .ordered-by {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            color: #555;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .color-section {
+            margin: 20px 0;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .color-option.taupe {
+            background-color: #ae9f87;
+            /* Taupe color */
+        }
+
+        .color-option.dark {
+            background-color: #3a3a3a;
+            /* Dark color */
+            border: 2px solid #000;
+        }
+
+        .seating-options {
+            margin: 20px 0;
+        }
+
+        .option-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .size-option {
+            border: 1px solid #ddd;
+            padding: 15px;
+            min-width: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .size-option.active {
+            border: 2px solid #000;
+            background-color: #f9f9f9;
+        }
+
+        .size-option-price {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .offer-price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .discount-badge {
+            background-color: #e8f4f8;
+            color: #4a90e2;
+            padding: 5px 10px;
+            margin-left: 15px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .tax-info {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .available-offers {
+            margin: 25px 0;
+        }
+
+        .offer-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .offer-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .offer-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ff5252;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .offer-content {
+            font-size: 14px;
+        }
+
+        .learn-more {
+            color: #4a90e2;
+            font-weight: bold;
+            margin-top: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+
+        .benefit {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .benefit-text {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .location-delivery {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .location {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .edit-btn {
+            color: #4a90e2;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .delivery-date {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <div class="top-navigation">
+        <div class="logo-container">
+            <a href="#" class="logo">CozyCouch</a>
+        </div>
+        <div class="main-nav">
+            <div class="main-nav-items">
+                <a href="#" class="active-nav">HOME FURNITURE</a>
+                <a href="#">BUSINESS FURNITURE & PROJECTS</a>
+                <a href="#">SERVICES</a>
+                <a href="#">BLOGS</a>
+                <a href="#">BECOME OUR DEALER</a>
+                <a href="#">STORE LOCATOR</a>
+                <a href="#">TRACK ORDER</a>
+                <a href="#">CONTACT US</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondary Navigation -->
+    <div class="secondary-nav">
+        <div class="secondary-nav-items">
+            <a href="#">PRODUCTS<span>▼</span></a>
+            <a href="#">FURNITURE SETS</a>
+            <a href="#">ROOMS<span>▼</span></a>
+            <a href="#">HOME INTERIORS</a>
+            <a href="#">KITCHENS</a>
+            <a href="#">NEW ARRIVALS</a>
+            <a href="#">OFFERS<span>▼</span></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="What are you looking for?">
+            <div class="icon-group">
+                <a href="#">🔍</a>
+                <a href="#">📷</a>
+                <a href="#">❤️</a>
+                <a href="#">🛒</a>
+                <a href="#">👤</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Information Section -->
+    <div class="product-section">
+        <div class="product-info">
+            <div>
+                <div class="product-id">Product ID: 56101502SD02262</div>
+                <div class="product-title">Pangram 3 Seater Fabric Sofa</div>
+                <div class="product-subtitle">3-Years Warranty, Solid Wood, Taupe</div>
+            </div>
+            <div class="social-actions">
+                <a href="#">WISHLIST ❤️</a>
+                <a href="#">SHARE 🔗</a>
+            </div>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="#">Home</a> > <a href="#">Seating</a> > <a href="#">Sofas & Loungers</a> > <a href="#">Sofa
+                Design</a>
+        </div>
+
+        <!-- Product Display -->
+        <div class="product-container">
+            <div class="product-gallery">
+                <div class="thumbnails">
+                    <div class="thumbnail">
+                        <img src="../images/GodrejPangram.png" alt="Sofa Front View">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../images/GodrejPangram.png" alt="Sofa Side View">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../images/GodrejPangram.png" alt="Sofa Detail View">
+                    </div>
+                    <div class="thumbnail video-thumbnail">
+                        <div class="video-play-btn">▶</div>
+                    </div>
+                </div>
+                <div class="main-product-image">
+                    <img src="../images/GodrejPangram.png" alt="Pangram 3 Seater Fabric Sofa">
+                </div>
+            </div>
+
+            <div class="product-details">
+                <div class="rating">
+                    <div class="stars">★★★★★</div>
+                    <a href="#" class="review-count">(5) 1 reviews ></a>
+                </div>
+
+                <div class="ordered-by">📈 Ordered by 46 Customers</div>
+
+                <div class="color-section">
+                    <div class="option-label">COLOR : Pangram_Taupe</div>
+                    <div class="color-options">
+                        <div class="color-option taupe"></div>
+                        <div class="color-option dark"></div>
+                    </div>
+                </div>
+
+                <div class="seating-options">
+                    <div class="option-label">SEATING CAPACITY : 3 Seater</div>
+                    <div class="size-options">
+                        <div class="size-option">
+                            <div>1 Seater</div>
+                            <div class="size-option-price">₹9,390</div>
+                        </div>
+                        <div class="size-option">
+                            <div>2 Seater</div>
+                            <div class="size-option-price">₹12,890</div>
+                        </div>
+                        <div class="size-option active">
+                            <div>3 Seater</div>
+                            <div class="size-option-price">₹17,090</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-price">
+                    Offer Price: ₹17,090 <span class="discount-badge">10% OFF</span>
+                </div>
+                <div class="original-price">
+                    MRP: ₹19,019
+                </div>
+                <div class="tax-info">
+                    Inclusive of all taxes
+                </div>
+
+                <div class="available-offers">
+                    <div class="offer-title">Available Offers</div>
+
+                    <div class="offer-item">
+                        <div class="offer-icon">💳</div>
+                        <div class="offer-content">
+                            <div><strong>No Cost EMI:</strong> Starting from ₹5697/month. Standard EMI also available.
+                            </div>
+                            <div class="learn-more">LEARN MORE</div>
+                        </div>
+                    </div>
+
+                    <div class="offer-item">
+                        <div class="offer-icon">🛡️</div>
+                        <div class="offer-content">
+                            <div><strong>Warranty:</strong> Free Standard 3 Years Warranty. Get extended warranty
+                                starting at ₹999</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits">
+                    <div class="benefit">
+                        <img src="../images/GodrejPangram.png" alt="Free Delivery" class="benefit-icon">
+                        <div class="benefit-text">Free Delivery<br>& Installation</div>
+                    </div>
+                    <div class="benefit">
+                        <img src="../images/GodrejPangram.png" alt="7 days" class="benefit-icon">
+                        <div class="benefit-text">7 days<br>Replacement</div>
+                    </div>
+                    <div class="benefit">
+                        <img src="../images/GodrejPangram.png" alt="Assured Quality" class="benefit-icon">
+                        <div class="benefit-text">Assured<br>Quality</div>
+                    </div>
+                </div>
+
+                <div class="location-delivery">
+                    <div class="location">
+                        <div>📍 400001</div>
+                        <div class="edit-btn">EDIT</div>
+                    </div>
+                    <div class="delivery-date">
+                        Delivery by Monday, 21 April 2025
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ontic-in.github.io/product-recommendation-agent-demo/realfast.js"></script>
+
+    <script type='text/javascript'
+        src='https://realfast-ai--sandboxjtb.sandbox.my.site.com/ESWProductRecommendation1743574996532/assets/js/bootstrap.min.js'
+        onload='initEmbeddedMessaging()'></script>
+
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+
+</html>

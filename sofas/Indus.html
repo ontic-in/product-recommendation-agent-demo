@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CozyCouch - Windle 3-Seater Fabric Sofa</title>
+    <title>CozyCouch - Indus Manual 3-Seater Leather Recliner Sofa</title>
     <style>
         * {
             margin: 0;
@@ -129,19 +129,20 @@
         }
 
         .product-title {
-            font-size: 18px;
+            font-size: 24px;
             font-weight: bold;
             margin-bottom: 5px;
         }
 
         .product-subtitle {
-            font-size: 14px;
+            font-size: 16px;
             color: #555;
         }
 
         .breadcrumb {
             font-size: 12px;
             color: #555;
+            margin-bottom: 20px;
         }
 
         .breadcrumb a {
@@ -224,10 +225,69 @@
             padding-left: 30px;
         }
 
+        .seating-options {
+            margin: 20px 0;
+        }
+
+        .option-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .size-option {
+            border: 1px solid #ddd;
+            padding: 15px;
+            min-width: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .size-option.active {
+            border: 2px solid #000;
+            background-color: #f9f9f9;
+        }
+
+        .size-option-price {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .color-section {
+            margin: 20px 0;
+        }
+
+        .color-option {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #6A4B55;
+            /* Burgundy color */
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
         .offer-price {
             font-size: 24px;
             font-weight: bold;
             margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .discount-badge {
+            background-color: #e8f4f8;
+            color: #4a90e2;
+            padding: 5px 10px;
+            margin-left: 15px;
+            border-radius: 4px;
+            font-size: 16px;
         }
 
         .original-price {
@@ -242,97 +302,125 @@
             margin-bottom: 15px;
         }
 
-        .discount-highlight {
-            background-color: #f9f9f9;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
+        .available-offers {
+            margin: 25px 0;
         }
 
-        .specification-table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
+        .offer-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
-        .specification-table td {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
+        .offer-item {
+            display: flex;
+            margin-bottom: 15px;
         }
 
-        .spec-title {
-            color: #555;
-            width: 40%;
+        .offer-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ff5252;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
         }
 
-        .spec-value {
-            font-weight: 500;
+        .offer-content {
+            font-size: 14px;
         }
 
-        .details-accordion {
-            margin: 20px 0;
-            border: 1px solid #eee;
-            border-radius: 5px;
+        .learn-more {
+            color: #4a90e2;
+            font-weight: bold;
+            margin-top: 5px;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-        .accordion-header {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
+        .benefits {
             display: flex;
             justify-content: space-between;
+            margin: 30px 0;
+        }
+
+        .benefit {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .benefit-text {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .location-delivery {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .location {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .edit-btn {
+            color: #4a90e2;
+            font-weight: bold;
             cursor: pointer;
         }
 
-        .accordion-title {
-            font-weight: bold;
+        .delivery-date {
+            font-size: 14px;
+            color: #555;
         }
 
-        .accordion-icon {
+        .quantity-selector {
+            display: flex;
+            margin: 20px 0;
+            align-items: center;
+        }
+
+        .qty-box {
+            display: flex;
+            border: 1px solid #ddd;
+            width: 120px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .qty-input {
+            flex: 1;
+            text-align: center;
+            border: none;
             font-size: 18px;
         }
 
-        /* Related products section */
-        .related-section {
-            padding: 30px 0;
-        }
-
-        .section-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .related-products {
+        .qty-dropdown {
             display: flex;
-            gap: 20px;
-        }
-
-        .related-product {
-            width: 250px;
-            border: 1px solid #eee;
-            padding: 10px;
-        }
-
-        .related-product img {
-            width: 100%;
-            height: auto;
-        }
-
-        .related-price {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .related-discount {
-            color: green;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            cursor: pointer;
+            background-color: #f9f9f9;
         }
 
         /* CTA Button */
         .add-to-cart {
-            width: 100%;
+            flex: 1;
             padding: 15px;
             background-color: #000;
             color: white;
@@ -340,6 +428,7 @@
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
+            height: 40px;
         }
     </style>
 </head>
@@ -391,18 +480,18 @@
     <div class="product-section">
         <div class="product-info">
             <div>
-                <div class="product-id">Product ID: 56101502SD04423</div>
-                <div class="product-title">Windle 3-Seater Fabric Sofa</div>
-                <div class="product-subtitle">1-Year Warranty, Solid Wood, Taupe and Camel</div>
+                <div class="product-id">Product ID: 56101502SD04294</div>
+                <div class="product-title">Indus Manual 3-Seater Leather Recliner Sofa</div>
+                <div class="product-subtitle">1-Year Warranty, Burgundy</div>
             </div>
             <div class="social-actions">
-                <a href="#">ADD TO CART</a>
+                <a href="#">WISHLIST ❤️</a>
+                <a href="#">SHARE 🔗</a>
             </div>
         </div>
 
         <div class="breadcrumb">
-            <a href="#">Home</a> > <a href="#">Seating</a> > <a href="#">Sofas & Loungers</a> > <a href="#">Sofa
-                Design</a>
+            <a href="#">Home</a> > <a href="#">New Arrivals</a>
         </div>
 
         <!-- Product Display -->
@@ -410,134 +499,121 @@
             <div class="product-gallery">
                 <div class="thumbnails">
                     <div class="thumbnail">
-                        <img src="/api/placeholder/70/70" alt="Sofa Thumbnail 1">
+                        <img src="../images/GodrejIndus.png" alt="Sofa Front View">
                     </div>
                     <div class="thumbnail">
-                        <img src="/api/placeholder/70/70" alt="Sofa Thumbnail 2">
+                        <img src="../images/GodrejIndus.png" alt="Sofa Side View">
                     </div>
                     <div class="thumbnail">
-                        <img src="/api/placeholder/70/70" alt="Sofa Thumbnail 3">
+                        <img src="../images/GodrejIndus.png" alt="Sofa Reclined View">
                     </div>
                     <div class="thumbnail video-thumbnail">
                         <div class="video-play-btn">▶</div>
                     </div>
                 </div>
                 <div class="main-product-image">
-                    <img src="/api/placeholder/500/350" alt="Windle 3-Seater Fabric Sofa">
+                    <img src="../images/GodrejIndus.png" alt="Indus Manual 3-Seater Leather Recliner Sofa">
                 </div>
             </div>
 
             <div class="product-details">
+                <div class="seating-options">
+                    <div class="option-label">SEATING CAPACITY : 3 Seater</div>
+                    <div class="size-options">
+                        <div class="size-option">
+                            <div>1 Seater</div>
+                            <div class="size-option-price">₹43,090</div>
+                        </div>
+                        <div class="size-option">
+                            <div>2 Seater</div>
+                            <div class="size-option-price">₹70,790</div>
+                        </div>
+                        <div class="size-option active">
+                            <div>3 Seater</div>
+                            <div class="size-option-price">₹95,190</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-section">
+                    <div class="option-label">COLOR : Burgundy</div>
+                    <div class="color-option"></div>
+                </div>
+
                 <div class="offer-price">
-                    Offer Price: ₹17,090
+                    Offer Price: ₹95,190 <span class="discount-badge">10% OFF</span>
                 </div>
                 <div class="original-price">
-                    MRP: ₹35,600
+                    MRP: ₹1,05,800
                 </div>
                 <div class="tax-info">
                     Inclusive of all taxes
                 </div>
 
-                <div class="discount-highlight">
-                    <strong>52% OFF & 10% Instant discount</strong> on Federal Bank Credit Card EMI Transaction, up to
-                    ₹1,500 on purchase value of ₹10,000 and above
-                </div>
+                <div class="available-offers">
+                    <div class="offer-title">Available Offers</div>
 
-                <div>
-                    <p>Ultimate piece for flexible living spaces that cater to all your needs.</p>
-                </div>
+                    <div class="offer-item">
+                        <div class="offer-icon">💳</div>
+                        <div class="offer-content">
+                            <div><strong>No Cost EMI:</strong> Starting from ₹10577/month. Standard EMI also available.
+                            </div>
+                            <div class="learn-more">LEARN MORE</div>
+                        </div>
+                    </div>
 
-                <h2 style="margin-top: 30px;">Product Details</h2>
-
-                <div class="details-accordion">
-                    <div class="accordion-header">
-                        <div class="accordion-title">Specifications</div>
-                        <div class="accordion-icon">▼</div>
+                    <div class="offer-item">
+                        <div class="offer-icon">🛡️</div>
+                        <div class="offer-content">
+                            <div><strong>Warranty:</strong> Free Standard 1 Year Warranty.</div>
+                        </div>
                     </div>
                 </div>
 
-                <table class="specification-table">
-                    <tr>
-                        <td class="spec-title">Country Of Origin</td>
-                        <td class="spec-value">India</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Finish Color</td>
-                        <td class="spec-value">Taupe</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Sales Package</td>
-                        <td class="spec-value">1 Sofa (Three Seater)</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Seat Height (cm)</td>
-                        <td class="spec-value">41.5</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Dimensions W × H × D (cm)</td>
-                        <td class="spec-value">187 × 73.5 × 77</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Secondary Material</td>
-                        <td class="spec-value">Pinewood</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Primary Material</td>
-                        <td class="spec-value">Solid Wood</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Delivery Condition</td>
-                        <td class="spec-value">Knock Down</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Upholstery Material</td>
-                        <td class="spec-value">Fabric</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-title">Warranty</td>
-                        <td class="spec-value">1 Year Warranty</td>
-                    </tr>
-                </table>
-
-                <div class="details-accordion">
-                    <div class="accordion-header">
-                        <div class="accordion-title">Additional Information</div>
-                        <div class="accordion-icon">▼</div>
+                <div class="benefits">
+                    <div class="benefit">
+                        <img src="../images/GodrejIndus.png" alt="Free Delivery" class="benefit-icon">
+                        <div class="benefit-text">Free Delivery<br>& Installation</div>
+                    </div>
+                    <div class="benefit">
+                        <img src="../images/GodrejIndus.png" alt="7 days" class="benefit-icon">
+                        <div class="benefit-text">7 days<br>Replacement</div>
+                    </div>
+                    <div class="benefit">
+                        <img src="../images/GodrejIndus.png" alt="Assured Quality" class="benefit-icon">
+                        <div class="benefit-text">Assured<br>Quality</div>
                     </div>
                 </div>
 
-                <div class="details-accordion">
-                    <div class="accordion-header">
-                        <div class="accordion-title">Care Instructions and Disclaimer</div>
-                        <div class="accordion-icon">▼</div>
+                <div class="location-delivery">
+                    <div class="location">
+                        <div>📍 400001</div>
+                        <div class="edit-btn">EDIT</div>
+                    </div>
+                    <div class="delivery-date">
+                        Delivery by Thursday, 10 April 2025
                     </div>
                 </div>
 
-                <button class="add-to-cart">ADD TO CART</button>
+                <div class="quantity-selector">
+                    <div class="qty-box">
+                        <input type="text" class="qty-input" value="1" readonly>
+                        <div class="qty-dropdown">▼</div>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://ontic-in.github.io/product-recommendation-agent-demo/realfast.js"></script>
 
-    <!-- Complete Your Space Section -->
-    <div class="related-section">
-        <h2 class="section-title">COMPLETE YOUR SPACE</h2>
-        <div class="related-products">
-            <div class="related-product">
-                <img src="/api/placeholder/230/180" alt="Related Product">
-                <div class="related-price">
-                    <span>₹52,979</span>
-                    <span class="related-discount">(32% OFF)</span>
-                </div>
-                <div style="font-size: 12px; color: #888; margin-top: 5px;">MRP inclusive of all taxes</div>
-            </div>
-            <div class="related-product">
-                <img src="/api/placeholder/230/180" alt="Related Product">
-            </div>
-            <div class="related-product">
-                <img src="/api/placeholder/230/180" alt="Related Product">
-            </div>
-        </div>
-    </div>
+    <script type='text/javascript'
+        src='https://realfast-ai--sandboxjtb.sandbox.my.site.com/ESWProductRecommendation1743574996532/assets/js/bootstrap.min.js'
+        onload='initEmbeddedMessaging()'></script>
+
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 
 </html>

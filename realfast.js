@@ -10,19 +10,19 @@ var MESSAGES = [
   {
     text:
       "Hi there! 👋" +
-      "Looking for something perfect? I'm here to help you find the best products based on your preferences, needs, and budget. Just tell me what you're looking for, and I’ll take care of the rest!",
+      "Looking for comfy sofa or a recliner? Just let me know what you're looking for and I’ll handle the rest!",
     position: "left",
     delay: 500,
     id: "intro-msg",
   },
   {
-    text: "Do you offer sofa-cum-beds?",
+    text: "I’m interested in compact 3-seater sofas.",
     position: "right",
     delay: 1000,
     id: "rec-sofa-sets-question",
   },
   {
-    text: "Do you sell recliner chairs?",
+    text: "Show me recliners",
     position: "right",
     delay: 2000,
     id: "rec-sofa-sets-with-storage-question",
